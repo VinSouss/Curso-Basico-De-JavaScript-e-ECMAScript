@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidades</h1>
+    Nacionalidade <input type="string" name="txtnas" id="txtnas">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var txtna = window.document.getElementById('txtnas')
+            var res = window.document.querySelector('div#res')
+            var txtn = String(txtna.value)
+            res.innerHTML = `<p>Vivendo no <strong>${txtn}</strong></p>`
+            if( txtn == 'BR')
+                res.innerHTML += `Você é <strong>Brasileiro</strong>`
+            else{
+                res.innerHTML += `Você é <strong>Estrangeiro</strong>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
